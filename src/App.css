@@ -37,6 +37,12 @@ body {
   border: 10px solid rgb(40, 40, 40);
   box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.486);
   border-radius: 40px;
+  margin-right: 300px;
+  margin-left: -100px;
+}
+
+.phone-2 {
+  margin-right: 200px;
 }
 
 /* Phone Header */
