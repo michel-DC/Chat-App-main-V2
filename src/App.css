@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Global Styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f9fb; /* Gris clair avec une nuance douce */
+}
+
+/* Chat App Container */
+/* Chat App Container */
+.chat-app {
+  margin-left: 600px;
+  display: flex;
+  justify-content: space-between; /* Espacement égal entre les éléments */
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh; /* Centrer verticalement */
+  gap: 150px; /* Ajoute un espacement de 150px entre les deux téléphones */
+}
+
+/* Phone Container */
+.phone {
+  width: 320px;
+  height: 600px;
+  background: #ffffff; /* Blanc pur pour un aspect propre */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+  border: 10px solid rgb(40, 40, 40);
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.486);
+  border-radius: 40px;
+}
+
+/* Phone Header */
+.phone-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* User Selector */
+.user-selector {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1; /* Gris clair pour un fond neutre */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.user-selector:hover {
+  background-color: #e0e0e0; /* Légère couleur au survol */
+}
+
+select {
+  color: black;
+}
+
+option {
+  color: black;
+}
+
+input {
+  color: black;
+}
+
+/* Chat Box */
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding: 12px;
+  background-color: #f8f8f8; /* Gris très clair pour la lisibilité */
+  border-radius: 12px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.08); /* Ombre douce à l'intérieur */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacement agréable entre les messages */
+}
+
+/* Message Styles */
+.message {
+  max-width: 80%;
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: #e3f8ff; /* Bleu pâle léger pour un look doux */
+  color: #333; /* Texte sombre pour une bonne lisibilité */
+  display: inline-block;
+  word-wrap: break-word;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Sent Message */
+.message.sent {
+  background-color: #bde0fe; /* Bleu plus intense pour le message envoyé */
+  align-self: flex-end; /* Aligner à droite */
+}
+
+/* Received Message */
+.message.received {
+  background-color: #f2f2f2; /* Gris très léger pour les messages reçus */
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Message Input */
+.message-input {
+  width: 80%;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background-color: #fafafa; /* Fond léger pour un contraste subtil */
+  transition: border-color 0.3s ease;
+}
+
+.message-input:focus {
+  border-color: #4caf50; /* Bordure verte au focus pour attirer l'attention */
+}
+
+/* Send Button */
+.send-button {
+  width: 15%;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 12px;
+  border: none;
+  background-color: #33ccff; /* Vert frais pour une action positive */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Or {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: black;
+}
+
+/* Send button */
+button {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
